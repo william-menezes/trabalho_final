@@ -32,6 +32,7 @@ public class Corrente extends Conta {
             } else {
                 if (valor <= saldo) {
                     saldo -= valor;
+                    dataMovimentacao = LocalDate.now();
                 } else {
                     System.out.println("Saldo insuficiente!");
                     System.out.println("Deseja utilizar o limite especial?");
@@ -44,7 +45,7 @@ public class Corrente extends Conta {
 
                     switch (c) {
                         case 'Y':
-                            saqueLimiteEspecial(valor);
+                            usarLimiteEspecial(valor);
                             break;
                         case 'N':
                             System.out.println("Operação cancelada!");
@@ -55,14 +56,6 @@ public class Corrente extends Conta {
         }
     }
 
-    public void saqueLimiteEspecial(double valor) {
-        //Variavel para armazenar o valor que será debitado do limite do cheque especial
-        double diferenca = saldo - valor;
-
-        saldo = saldo - (valor + diferenca);
-        limiteChequeEspecial += diferenca;
-    }
-
     @Override
     public void deposito(String senha, double valor) {
         if (autenticacao(senha)) {
@@ -71,6 +64,7 @@ public class Corrente extends Conta {
                 System.out.println("Não é possível fazer depósito de valores inferiores a R$ 0.01");
             } else {
                 saldo += valor;
+                dataMovimentacao = LocalDate.now();
                 System.out.println("Depósito realizado com sucesso!");
             }
         }
@@ -94,13 +88,38 @@ public class Corrente extends Conta {
             if (valor <= 0) {
                 System.out.println("Não é possível realizar o pagamento de valores inferiores a R$ 0.01");
             } else {
-                if (valor > saldo) {
-                    System.out.println("Saldo insuficiente!");
-                } else {
+                if (valor <= saldo) {
                     saldo -= valor;
+                    dataMovimentacao = LocalDate.now();
+                } else {
+                    System.out.println("Saldo insuficiente!");
+                    System.out.println("Deseja utilizar o limite especial?");
+                    System.out.println("Y/N");
+
+                    Scanner scanner = new Scanner(System.in);
+                    char c;
+                    c = scanner.next().charAt(0);
+                    c = Character.toLowerCase(c);
+
+                    switch (c) {
+                        case 'Y':
+                            usarLimiteEspecial(valor);
+                            break;
+                        case 'N':
+                            System.out.println("Operação cancelada!");
+                            break;
+                    }
                 }
             }
         }
     }
 
+    public void usarLimiteEspecial(double valor) {
+        //Variavel para armazenar o valor que será debitado do limite do cheque especial
+        double diferenca = saldo - valor;
+
+        saldo = saldo - (valor + diferenca);
+        limiteChequeEspecial += diferenca;
+        dataMovimentacao = LocalDate.now();
+    }
 }
