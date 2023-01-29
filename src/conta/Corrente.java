@@ -91,6 +91,7 @@ public class Corrente extends Conta {
                 if (valor <= saldo) {
                     saldo -= valor;
                     dataMovimentacao = LocalDate.now();
+                    System.out.println("Pagamento realizado com sucesso!");
                 } else {
                     System.out.println("Saldo insuficiente!");
                     System.out.println("Deseja utilizar o limite especial?");
