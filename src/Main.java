@@ -72,14 +72,5 @@ public class Main {
         contaCorrente[0].deposito("a1234", 500.0);
         contaSalario[1].consultaSaldo("1212");
 
-        /*
-        try {
-            contaCorrente[0].saque("a1234", 5.0);
-        } catch (ValorInvalidoException e) {
-            System.out.println(e.getMessage());
-        } finally {
-            contaCorrente[0].consultaSaldo("a1234");
-        }
-        */
     }
 }
