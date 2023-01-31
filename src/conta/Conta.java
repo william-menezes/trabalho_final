@@ -9,6 +9,7 @@ public abstract class Conta {
     protected int numero;
     protected double saldo;
     protected LocalDate dataAbertura;
+
     protected LocalDate dataMovimentacao;
 
     public Conta(String senha, StatusConta status, int numero, double saldo, LocalDate dataAbertura) {

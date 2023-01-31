@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public enum CanalTransacao {
+public enum CanalTransacao {
+    INTERNET, CAIXA_ELETRONICO, CAIXA_FISICO;
 }

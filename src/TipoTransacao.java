@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public enum TipoTransacao {
+public enum TipoTransacao {
+    SAQUE, DEPOSITO, CONSULTA_SALDO, PAGAMENTO;
 }
