@@ -1,8 +1,11 @@
 package conta;
 
+import InterfaceExecao.Autenticavel;
+import InterfaceExecao.ValorInvalidoException;
+
 import java.time.LocalDate;
 
-public class Salario extends Conta implements Autenticavel{
+public class Salario extends Conta implements Autenticavel {
     private double limiteSaque;
     private double limiteTransferencia;
 

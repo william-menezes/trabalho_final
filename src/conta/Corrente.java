@@ -1,12 +1,13 @@
 package conta;
 
+import InterfaceExecao.Autenticavel;
+import InterfaceExecao.ValorInvalidoException;
 import pessoa.Cliente;
 
 import java.time.LocalDate;
-import java.time.Period;
 import java.util.Scanner;
 
-public class Corrente extends Conta implements Autenticavel{
+public class Corrente extends Conta implements Autenticavel {
     private double limiteChequeEspecial;
     private double taxaAdministrativa;
     private double limiteTotal;

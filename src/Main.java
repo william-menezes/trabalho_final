@@ -1,7 +1,7 @@
 import agencia.Agencia;
 import conta.Corrente;
 import conta.StatusConta;
-import conta.ValorInvalidoException;
+import InterfaceExecao.ValorInvalidoException;
 import endereco.Endereco;
 import pessoa.Cargo;
 import pessoa.EstadoCivil;

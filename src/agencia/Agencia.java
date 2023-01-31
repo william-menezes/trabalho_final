@@ -1,6 +1,6 @@
 package agencia;
 
-import conta.Autenticavel;
+import InterfaceExecao.Autenticavel;
 import endereco.Endereco;
 import pessoa.Gerente;
 
