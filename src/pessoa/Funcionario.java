@@ -10,6 +10,19 @@ public class Funcionario extends Pessoa{
     private double salario;
     private int anoIngresso;
 
+    public Funcionario(String carteiraTrabalho, String rg, Sexo sexo, String cargo, double salario, int anoIngresso) {
+        this.carteiraTrabalho = carteiraTrabalho;
+        this.rg = rg;
+        this.sexo = sexo;
+        this.cargo = cargo;
+        this.salario = salario;
+        this.anoIngresso = anoIngresso;
+    }
+
+    public Funcionario() {
+        super();
+    }
+
     public double calcularSalario() {
         int anoAtual = LocalDate.now().getYear();
 
