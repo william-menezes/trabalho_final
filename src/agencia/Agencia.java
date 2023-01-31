@@ -4,6 +4,8 @@ import InterfaceExecao.Autenticavel;
 import endereco.Endereco;
 import pessoa.Gerente;
 
+import java.util.Objects;
+
 public class Agencia implements Autenticavel {
     protected int numero;
     protected String nome;
@@ -16,7 +18,7 @@ public class Agencia implements Autenticavel {
 
 
     public boolean autenticacao(String senha){
-        if(senha == senhaCriaAgencia)
+        if(Objects.equals(senha, senhaCriaAgencia))
             return true;
         else return false;
     }

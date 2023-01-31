@@ -12,6 +12,9 @@ public class ClienteConta {
         this.clientes = clientes;
     }
 
+    public ClienteConta() {
+    }
+
     public Conta getConta() {
         return conta;
     }

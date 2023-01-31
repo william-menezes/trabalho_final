@@ -17,7 +17,9 @@ public abstract class Pessoa {
     }
 
     public Pessoa(String cpf, String nome, LocalDate dataNascimento, EstadoCivil estadoCivil, Endereco endereco) {
-        if (validaCPF(cpf)) this.cpf = cpf;
+        if (validaCPF(cpf)) {
+            this.cpf = cpf;
+        }
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.estadoCivil = estadoCivil;
