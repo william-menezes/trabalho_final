@@ -1,3 +1,7 @@
+package transacao;
+
+import agencia.ClienteConta;
+
 import java.time.LocalDate;
 
 public class Transacao {

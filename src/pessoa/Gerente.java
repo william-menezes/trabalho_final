@@ -6,7 +6,7 @@ import java.time.LocalDate;
 
 public class Gerente extends Funcionario {
     private LocalDate dataIngresso;
-    //private Agencia agencia;
+    //private agencia.Agencia agencia;
     private boolean temCursoBasico;
     private static double comissao;
 
