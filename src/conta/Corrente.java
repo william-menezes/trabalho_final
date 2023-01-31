@@ -1,5 +1,7 @@
 package conta;
 
+import pessoa.Cliente;
+
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.Scanner;
@@ -8,6 +10,8 @@ public class Corrente extends Conta implements Autenticavel{
     private double limiteChequeEspecial;
     private double taxaAdministrativa;
     private double limiteTotal;
+    private Cliente cliente;
+    private Cliente cliente2;
 
     public Corrente(String senha, StatusConta status, int numero, double saldo, LocalDate dataAbertura) {
         super(senha, status, numero, saldo, dataAbertura);

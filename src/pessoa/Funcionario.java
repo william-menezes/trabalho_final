@@ -1,5 +1,7 @@
 package pessoa;
 
+import endereco.Endereco;
+
 import java.time.LocalDate;
 
 public class Funcionario extends Pessoa{
@@ -10,7 +12,8 @@ public class Funcionario extends Pessoa{
     private double salario;
     private int anoIngresso;
 
-    public Funcionario(String carteiraTrabalho, String rg, Sexo sexo, String cargo, double salario, int anoIngresso) {
+    public Funcionario(String cpf, String nome, LocalDate dataNascimento, EstatoCivil estatoCivil, Endereco endereco, String carteiraTrabalho, String rg, Sexo sexo, String cargo, double salario, int anoIngresso) {
+        super(cpf, nome, dataNascimento, estatoCivil, endereco);
         this.carteiraTrabalho = carteiraTrabalho;
         this.rg = rg;
         this.sexo = sexo;
