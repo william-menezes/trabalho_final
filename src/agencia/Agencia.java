@@ -29,7 +29,7 @@ public class Agencia implements Autenticavel {
             this.nome = nome;
             this.endereco = endereco;
             this.gerente = gerente;
-            System.out.println("Agencia cadastrada com sucesso");
+            System.out.println("agencia.Agencia cadastrada com sucesso");
         }
         else System.out.println("Senha de cadastro invalida, insira a senha correta para cadastrar uma agencia");
     }
