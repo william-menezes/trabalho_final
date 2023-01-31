@@ -8,11 +8,11 @@ public class Funcionario extends Pessoa {
     private String carteiraTrabalho;
     private String rg;
     private Sexo sexo;
-    private String cargo; //criar uma classe Cargo?
+    private Cargo cargo;
     private double salario;
     private int anoIngresso;
 
-    public Funcionario(String cpf, String nome, LocalDate dataNascimento, EstadoCivil estadoCivil, Endereco endereco, String carteiraTrabalho, String rg, Sexo sexo, String cargo, double salario, int anoIngresso) {
+    public Funcionario(String cpf, String nome, LocalDate dataNascimento, EstadoCivil estadoCivil, Endereco endereco, String carteiraTrabalho, String rg, Sexo sexo, Cargo cargo, double salario, int anoIngresso) {
         super(cpf, nome, dataNascimento, estadoCivil, endereco);
         this.carteiraTrabalho = carteiraTrabalho;
         this.rg = rg;
@@ -60,11 +60,11 @@ public class Funcionario extends Pessoa {
         this.sexo = sexo;
     }
 
-    public String getCargo() {
+    public Cargo getCargo() {
         return cargo;
     }
 
-    public void setCargo(String cargo) {
+    public void setCargo(Cargo cargo) {
         this.cargo = cargo;
     }
 
