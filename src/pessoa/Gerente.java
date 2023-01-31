@@ -14,7 +14,7 @@ public class Gerente extends Funcionario {
         super();
     }
 
-    public Gerente(String cpf, String nome, LocalDate dataNascimento, EstadoCivil estadoCivil, Endereco endereco, String carteiraTrabalho, String rg, Sexo sexo, String cargo, double salario, int anoIngresso, LocalDate dataIngresso, boolean temCursoBasico) {
+    public Gerente(String cpf, String nome, LocalDate dataNascimento, EstadoCivil estadoCivil, Endereco endereco, String carteiraTrabalho, String rg, Sexo sexo, Cargo cargo, double salario, int anoIngresso, LocalDate dataIngresso, boolean temCursoBasico) {
         super(cpf, nome, dataNascimento, estadoCivil, endereco, carteiraTrabalho, rg, sexo, cargo, salario, anoIngresso);
         this.dataIngresso = dataIngresso;
         this.temCursoBasico = temCursoBasico;
