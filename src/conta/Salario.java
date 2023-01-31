@@ -2,7 +2,7 @@ package conta;
 
 import java.time.LocalDate;
 
-public class Salario extends Conta {
+public class Salario extends Conta implements Autenticavel{
     private double limiteSaque;
     private double limiteTransferencia;
 
@@ -22,7 +22,8 @@ public class Salario extends Conta {
             System.out.println("************* SAQUE ****************");
 
             if (valor <= 0) {
-                System.out.println("Não é possível realizar saques de valores inferiores a R$ 0.1");
+                throw new ValorInvalidoException("Não é possível realizar saques de valores inferiores a R$ 0.01");
+                //System.out.println("Não é possível realizar saques de valores inferiores a R$ 0.1");
             } else {
                 if (valor > saldo) {
                     System.out.println("Saldo insuficiente!");
@@ -44,7 +45,8 @@ public class Salario extends Conta {
         if (autenticacao(senha)) {
             System.out.println("************* DEPÓSITO ****************");
             if (valor <= 0) {
-                System.out.println("Não é possível fazer depósito de valores inferiores a R$ 0.01");
+                throw new ValorInvalidoException("Não é possível fazer depósito de valores inferiores a R$ 0.01");
+                //System.out.println("Não é possível fazer depósito de valores inferiores a R$ 0.01");
             } else {
                 saldo += valor;
                 dataMovimentacao = LocalDate.now();
@@ -67,7 +69,8 @@ public class Salario extends Conta {
             System.out.println("************* PAGAMENTO ****************");
 
             if (valor <= 0) {
-                System.out.println("Não é possível realizar o pagamento de valores inferiores a R$ 0.01");
+                throw new ValorInvalidoException("Não é possível realizar o pagamento de valores inferiores a R$ 0.01");
+                //System.out.println("Não é possível realizar o pagamento de valores inferiores a R$ 0.01");
             } else {
                 if (valor <= saldo) {
                     saldo -= valor;

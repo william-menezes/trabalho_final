@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.Scanner;
 
-public class Corrente extends Conta {
+public class Corrente extends Conta implements Autenticavel{
     private double limiteChequeEspecial;
     private double taxaAdministrativa;
     private double limiteTotal;
@@ -28,7 +28,8 @@ public class Corrente extends Conta {
             System.out.println("************* SAQUE ****************");
 
             if (valor <= 0) {
-                System.out.println("Não é possível realizar saques de valores inferiores a R$ 0.01");
+                throw new ValorInvalidoException("Não é possível realizar saques de valores inferiores a R$ 0.01");
+                //System.out.println("Não é possível realizar saques de valores inferiores a R$ 0.01");
             } else {
                 if (valor <= saldo) {
                     saldo -= valor;
@@ -61,7 +62,8 @@ public class Corrente extends Conta {
         if (autenticacao(senha)) {
             System.out.println("************* DEPÓSITO ****************");
             if (valor <= 0) {
-                System.out.println("Não é possível fazer depósito de valores inferiores a R$ 0.01");
+                throw new ValorInvalidoException("Não é possível fazer depósito de valores inferiores a R$ 0.01");
+                //System.out.println("Não é possível fazer depósito de valores inferiores a R$ 0.01");
             } else {
                 saldo += valor;
                 dataMovimentacao = LocalDate.now();
@@ -86,7 +88,8 @@ public class Corrente extends Conta {
             System.out.println("************* PAGAMENTO ****************");
 
             if (valor <= 0) {
-                System.out.println("Não é possível realizar o pagamento de valores inferiores a R$ 0.01");
+                throw new ValorInvalidoException("Não é possível realizar o pagamento de valores inferiores a R$ 0.01");
+                //System.out.println("Não é possível realizar o pagamento de valores inferiores a R$ 0.01");
             } else {
                 if (valor <= saldo) {
                     saldo -= valor;
