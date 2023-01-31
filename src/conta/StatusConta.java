@@ -1,5 +1,5 @@
 package conta;
 
 public enum StatusConta {
-    ATIVA, DESATIVADA
+    ATIVA, DESATIVADA;
 }

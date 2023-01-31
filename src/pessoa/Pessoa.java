@@ -9,17 +9,17 @@ public abstract class Pessoa {
     protected String cpf;
     protected String nome;
     protected LocalDate dataNascimento;
-    protected EstatoCivil estatoCivil;
+    protected EstadoCivil estadoCivil;
     protected Endereco endereco;
 
     public Pessoa() {
     }
 
-    public Pessoa(String cpf, String nome, LocalDate dataNascimento, EstatoCivil estatoCivil, Endereco endereco) {
+    public Pessoa(String cpf, String nome, LocalDate dataNascimento, EstadoCivil estadoCivil, Endereco endereco) {
         this.cpf = cpf;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
-        this.estatoCivil = estatoCivil;
+        this.estadoCivil = estadoCivil;
         this.endereco = endereco;
     }
 
@@ -47,12 +47,12 @@ public abstract class Pessoa {
         this.dataNascimento = dataNascimento;
     }
 
-    public EstatoCivil getEstatoCivil() {
-        return estatoCivil;
+    public EstadoCivil getEstadoCivil() {
+        return estadoCivil;
     }
 
-    public void setEstatoCivil(EstatoCivil estatoCivil) {
-        this.estatoCivil = estatoCivil;
+    public void setEstadoCivil(EstadoCivil estadoCivil) {
+        this.estadoCivil = estadoCivil;
     }
 
     public Endereco getEndereco() {
@@ -62,55 +62,4 @@ public abstract class Pessoa {
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
     }
-
-//    private static String cpf;
-//    private static String nome;
-//    private static LocalDate dataNascimento;
-//    private static EstatoCivil estatoCivil;
-//    private static Endereco endereco;
-//
-//    public Pessoa() {
-//    }
-//
-//
-//
-//    public static String getCpf() {
-//        return cpf;
-//    }
-//
-//    public static void setCpf(String cpf) {
-//        Pessoa.cpf = cpf;
-//    }
-//
-//    public static String getNome() {
-//        return nome;
-//    }
-//
-//    public static void setNome(String nome) {
-//        Pessoa.nome = nome;
-//    }
-//
-//    public static LocalDate getDataNascimento() {
-//        return dataNascimento;
-//    }
-//
-//    public static void setDataNascimento(LocalDate dataNascimento) {
-//        Pessoa.dataNascimento = dataNascimento;
-//    }
-//
-//    public static EstatoCivil getEstatoCivil() {
-//        return estatoCivil;
-//    }
-//
-//    public static void setEstatoCivil(EstatoCivil estatoCivil) {
-//        Pessoa.estatoCivil = estatoCivil;
-//    }
-//
-//    public static Endereco getEndereco() {
-//        return endereco;
-//    }
-//
-//    public static void setEndereco(Endereco endereco) {
-//        Pessoa.endereco = endereco;
-//    }
 }

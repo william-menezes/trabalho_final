@@ -2,7 +2,7 @@ import conta.Corrente;
 import conta.StatusConta;
 import conta.ValorInvalidoException;
 import endereco.Endereco;
-import pessoa.EstatoCivil;
+import pessoa.EstadoCivil;
 import pessoa.Gerente;
 import pessoa.Sexo;
 
@@ -13,7 +13,7 @@ public class Main {
 
 
         Gerente gerentes[] = new Gerente[10];
-        gerentes[0] = new Gerente("72282256632", "Mariana Oliveira", LocalDate.parse("1990-02-03"), EstatoCivil.CASADO, new Endereco("Rua alagoas", "38408378", 12, "sem compl", "Martins", "Uberlandia", "MG"), "T123456", "MG123456", Sexo.FEMININO, "gerente geral", 4800.0, 2020, LocalDate.parse("2020-12-23"),true);
+        gerentes[0] = new Gerente("72282256632", "Mariana Oliveira", LocalDate.parse("1990-02-03"), EstadoCivil.CASADO, new Endereco("Rua alagoas", "38408378", 12, "sem compl", "Martins", "Uberlandia", "MG"), "T123456", "MG123456", Sexo.FEMININO, "gerente geral", 4800.0, 2020, LocalDate.parse("2020-12-23"),true);
         gerentes[1] = new Gerente();
         gerentes[2] = new Gerente();
         gerentes[3] = new Gerente();
@@ -37,7 +37,7 @@ public class Main {
 
 
         try{
-            contas[0].saque("a1234", -5.0);
+            contas[0].saque("a1234", 5.0);
         }catch (ValorInvalidoException e){
             System.out.println(e.getMessage());
         }finally {

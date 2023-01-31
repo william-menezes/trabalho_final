@@ -8,8 +8,8 @@ public class Cliente extends Pessoa{
     private Escolaridade escolaridade;
     private int numeroAgencia;
 
-    public Cliente(String cpf, String nome, LocalDate dataNascimento, EstatoCivil estatoCivil, Endereco endereco, Escolaridade escolaridade, int numeroAgencia) {
-        super(cpf, nome, dataNascimento, estatoCivil, endereco);
+    public Cliente(String cpf, String nome, LocalDate dataNascimento, EstadoCivil estadoCivil, Endereco endereco, Escolaridade escolaridade, int numeroAgencia) {
+        super(cpf, nome, dataNascimento, estadoCivil, endereco);
         this.escolaridade = escolaridade;
         this.numeroAgencia = numeroAgencia;
     }

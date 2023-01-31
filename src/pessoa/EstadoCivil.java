@@ -1,5 +1,5 @@
 package pessoa;
 
-public enum EstatoCivil {
+public enum EstadoCivil {
     SOLTEIRO, CASADO, SEPARADO, DIVORCIADO, VIUVO;
 }
